@@ -12,7 +12,10 @@ import { About } from './components/sections/About';
 import { Services } from './components/sections/Services';
 import { Projects } from './components/sections/Projects';
 import { Experience } from './components/sections/Experience';
+import { Integration } from './components/sections/Integration';
+import { Testimonials } from './components/sections/Testimonials';
 import { Contact } from './components/sections/Contact';
+import { Outro } from './components/sections/Outro';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -95,8 +98,13 @@ function App() {
             <Services />
             <Projects />
             <Experience />
+            <Integration />
+            <Testimonials />
             <Contact />
           </main>
+
+          {/* Outro - Final Ending Section */}
+          <Outro />
 
           {/* Footer */}
           <Footer />

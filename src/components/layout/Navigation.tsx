@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, FileText } from 'lucide-react';
 
 export const Navigation: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -55,13 +55,15 @@ export const Navigation: React.FC = () => {
                     ))}
                 </div>
 
-                {/* Social Icons */}
                 <div className="hidden md:flex items-center space-x-4">
                     <a href="https://github.com/Yashraj-sherke" target="_blank" rel="noopener noreferrer" className="text-luxury-gray hover:text-luxury-white transition-colors">
                         <Github size={20} />
                     </a>
                     <a href="https://www.linkedin.com/in/yashraj-sherke-35b8ab25b/" target="_blank" rel="noopener noreferrer" className="text-luxury-gray hover:text-luxury-white transition-colors">
                         <Linkedin size={20} />
+                    </a>
+                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="text-luxury-gray hover:text-luxury-white transition-colors" title="Resume">
+                        <FileText size={20} />
                     </a>
                     <a href="mailto:yashrajsherke49@gmail.com" className="text-luxury-gray hover:text-luxury-white transition-colors">
                         <Mail size={20} />
