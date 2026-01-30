@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Code2, Globe } from 'lucide-react';
+import { SectionTitle } from '../ui/SectionTitle';
 import profileImage from '../../assets/profile.jpg';
 
 // Align elements visually, not mathematically. Preserve negative space and editorial balance.
@@ -14,8 +15,12 @@ export const About: React.FC = () => {
     ];
 
     return (
-        <section id="about" className="relative py-20 px-6 bg-transparent" style={{ background: 'transparent' }}>
+        <section id="about" className="relative py-32 px-6 bg-transparent" style={{ background: 'transparent' }}>
             <div className="max-w-7xl mx-auto">
+                <SectionTitle>
+                    .../About
+                </SectionTitle>
+
                 {/* Main Layout: Image Left | About Middle | Social Icons Right */}
                 <div className="relative flex items-center gap-12 lg:gap-16">
                     {/* LEFT - PROFILE IMAGE WITH NAME */}
@@ -85,7 +90,6 @@ export const About: React.FC = () => {
                         className="flex-1"
                     >
                         <div className="max-w-2xl">
-                            <h2 className="text-3xl lg:text-4xl font-oswald font-bold text-[#f5f5f5] mb-6 tracking-tight">_About</h2>
                             <div className="text-[#a6a6a6] font-nunito text-base lg:text-lg mb-8 leading-relaxed space-y-4">
                                 <p>
                                     Full-stack developer with a strong focus on building clean, scalable user interfaces and performant systems.

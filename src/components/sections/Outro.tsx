@@ -34,8 +34,8 @@ export const Outro: React.FC = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="absolute left-8 lg:left-16 top-1/2 -translate-y-1/2"
                     >
-                        <p className="text-sm text-[#a6a6a6]/60 font-nunito mb-1">Graphic designer</p>
-                        <p className="text-sm text-[#f5f5f5]/70 font-nunito">– Jevin Hingrajiya</p>
+                        <p className="text-sm text-[#a6a6a6]/60 font-nunito mb-1">FullStack Developer</p>
+                        <p className="text-sm text-[#f5f5f5]/70 font-nunito">– Yashraj Sherke</p>
                     </motion.div>
 
                     {/* Center - Main Headline */}
@@ -60,7 +60,7 @@ export const Outro: React.FC = () => {
                         className="absolute right-8 lg:right-16 top-1/2 -translate-y-1/2"
                     >
                         <p className="text-sm text-[#a6a6a6]/60 font-nunito mb-1 text-right">UI/UX designer</p>
-                        <p className="text-sm text-[#f5f5f5]/70 font-nunito text-right">– Tushar Joshi</p>
+                        <p className="text-sm text-[#f5f5f5]/70 font-nunito text-right">– Yashraj Sherke</p>
                     </motion.div>
                 </div>
 
@@ -85,7 +85,7 @@ export const Outro: React.FC = () => {
                             yashrajsherke.portfolio.com
                         </p>
                         <p className="text-xs text-[#a6a6a6]/50 font-nunito">
-                            Jan 30th 2026
+                            {/* Jan 30th 2026 */}
                         </p>
                     </div>
                 </motion.div>

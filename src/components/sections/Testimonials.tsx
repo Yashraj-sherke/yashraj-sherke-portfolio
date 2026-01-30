@@ -37,7 +37,7 @@ export const Testimonials: React.FC = () => {
                     className="mb-16"
                 >
                     <h2 className="text-4xl lg:text-5xl font-oswald font-bold text-[#f5f5f5] mb-4 tracking-tight">
-                        Testimonials and Recognitions
+                        .../Testimonials and Recognitions
                     </h2>
                     <p className="text-[#a6a6a6] font-nunito text-base lg:text-lg max-w-4xl">
                         I'm proud to be recognized for my innovative solutions by prestigious firms and clients.

@@ -2,40 +2,43 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SectionTitle } from '../ui/SectionTitle';
 import { ExternalLink, Github } from 'lucide-react';
+import bitbudsImage from '../../assets/bitbuds.png';
+import payeaseImage from '../../assets/payease.png';
+import hiresphereImage from '../../assets/hiresphere.png';
 
 export const Projects: React.FC = () => {
     const projects = [
         {
             title: 'BitBuds',
             description: 'A Kids coding platform in easy way. Interactive learning environment for young developers.',
-            image: 'https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=800',
+            image: bitbudsImage,
             tags: ['React', 'Node.js', 'MongoDB', 'Express'],
             link: '#',
             github: '#'
         },
         {
-            title: 'Weather Forecast',
-            description: 'A responsive weather app that provides current weather and forecasts using a weather API.',
-            image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-            tags: ['React', 'API Integration', 'Tailwind CSS'],
-            link: 'https://yashraj-sherke.github.io/Whether-Forcast/',
+            title: 'PayEase',
+            description: 'A secure MERN-based payment system with authentication, protected routes, and reliable transaction processing.',
+            image: payeaseImage,
+            tags: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT'],
+            link: '#',
             github: 'https://github.com/Yashraj-sherke/Whether-Forcast'
         },
         {
-            title: 'Job Application Tracker',
-            description: 'Full-stack application for tracking job applications with admin panel and analytics.',
-            image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
-            tags: ['React', 'Node.js', 'MongoDB', 'Express'],
+            title: 'HireSphere',
+            description: 'A full-stack recruitment platform for managing job postings, applications, and recruiter dashboards.',
+            image: hiresphereImage,
+            tags: ['React', 'Node.js', 'MongoDB ', 'Express ', 'REST API'],
             link: '#',
-            github: '#'
+            github: 'https://github.com/Yashraj-sherke/Hire-Sphere'
         }
     ];
 
     return (
-        <section id="projects" className="relative py-32 px-6 bg-transparent" style={{background: 'transparent'}}>
+        <section id="projects" className="relative py-32 px-6 bg-transparent" style={{ background: 'transparent' }}>
             <div className="max-w-7xl mx-auto">
                 <SectionTitle subtitle="User-centered development approach enhances productivity and drives revenue growth">
-                    Projects
+                    .../Projects
                 </SectionTitle>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

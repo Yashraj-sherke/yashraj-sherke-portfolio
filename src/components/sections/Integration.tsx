@@ -6,10 +6,10 @@ import { Sprout, Star, Clock, Users, Code2, Database, Layers, Workflow, Cpu, Clo
 
 export const Integration: React.FC = () => {
     const stats = [
-        { number: '+332', label: 'Projects Completed', icon: Sprout },
-        { number: '100K', label: 'Reviews from clients & their users', icon: Star },
-        { number: '+20', label: 'Years of Experience', icon: Clock },
-        { number: '+25', label: 'Teams Collaborated', icon: Users },
+        { number: '+5', label: 'Projects Completed', icon: Sprout },
+        { number: '350+', label: 'DSA Problems Solved', icon: Star },
+        { number: '1+', label: 'Year Experience', icon: Clock },
+        { number: '3+', label: 'Team Collaborations', icon: Users },
     ];
 
     const integrationIcons = [
@@ -53,14 +53,19 @@ export const Integration: React.FC = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <h2 className="text-4xl lg:text-5xl font-oswald font-bold text-[#f5f5f5] mb-6 tracking-tight">
-                            Integration
+                            .../Integration
                         </h2>
-                        <p className="text-[#a6a6a6] font-nunito text-base lg:text-lg leading-relaxed mb-10 max-w-xl">
-                            Striving to create innovative applications, a solid product development strategy involves clear objectives,
-                            thorough research, robust data analysis, actionable insights, and innovation. Prioritize user experience,
-                            agile development, continuous optimization, consistent branding, and rigorous testing to ensure product
-                            quality, meet market demands, and drive sustainable growth.
-                        </p>
+                        <div className="text-[#a6a6a6] font-nunito text-base lg:text-lg leading-relaxed mb-10 max-w-xl space-y-4">
+                            <p>
+                                I focus on building scalable, secure, and user-centric applications using modern web technologies. With hands-on experience in MERN stack development, ReactJS, and cloud platforms, I design efficient systems that balance performance, usability, and reliability.
+                            </p>
+                            <p>
+                                My approach combines strong fundamentals in data structures, backend architecture, and UI engineering with practical industry experience. Through internships and personal projects, I continuously refine my skills in full-stack development, system optimization, and collaborative software engineering.
+                            </p>
+                            <p>
+                                I strive to deliver impactful digital solutions by emphasizing clean code, secure authentication, responsive design, and seamless user experiences.
+                            </p>
+                        </div>
 
                         {/* Stat Cards */}
                         <div className="grid grid-cols-2 gap-4">

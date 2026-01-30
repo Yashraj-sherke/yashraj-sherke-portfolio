@@ -6,24 +6,24 @@ import { GlassCard } from '../ui/GlassCard';
 export const Experience: React.FC = () => {
     const experiences = [
         {
-            year: '2018',
-            title: 'Sr. Fullstack & Mobile App Developer (Ionic)',
-            company: 'Freelance',
-            description: 'I\'m a Senior Fullstack & Mobile App Developer specializing in Ionic, with strong expertise in Hubilo & PHP (CodeIgniter). I create cross-platform mobile and web applications, focusing on scalable solutions and intuitive UI. My work includes designing robust backend architectures and delivering high-performance applications that meet client needs and exceed expectations.'
+            year: '2013-2020',
+            title: 'Jawahar Navodaya Vidyalaya, Singodi, Chhindwara',
+            company: '',
+            description: 'I completed my schooling at Jawahar Navodaya Vidyalaya, Singodi, Chhindwara, where I built a strong academic foundation and developed discipline, leadership, and problem-solving skills. This period played a crucial role in shaping my interest in science and technology.'
         },
         {
-            year: '2004',
-            title: 'Windows Application Developer',
-            company: 'Various Companies',
-            description: 'As a Windows Application Developer, I specialize in building robust desktop applications using C#, .NET, and WPF. I manage the full development lifecycle, including coding, testing, and debugging, ensuring thorough documentation and ongoing support for deployed applications.'
+            year: '2022-Present',
+            title: 'B.Tech in Computer Science Engineering',
+            company: '',
+            description: 'I started my B.Tech in Computer Science in 2022, where I am developing strong technical skills in programming, data structures, web development, and software engineering. Along with academics, I actively work on projects and improve my practical knowledge to prepare for a successful career in the tech industry.'
         }
     ];
 
     return (
-        <section id="experience" className="relative py-32 px-6 bg-transparent" style={{background: 'transparent'}}>
+        <section id="experience" className="relative py-32 px-6 bg-transparent" style={{ background: 'transparent' }}>
             <div className="max-w-7xl mx-auto">
                 <SectionTitle subtitle="With over two decades in software development, I've evolved from a Windows Application Developer to mastering LAMP/MEAN stacks and Ionic for mobile apps">
-                    Journey
+                    .../Journey
                 </SectionTitle>
 
                 <div className="grid md:grid-cols-2 gap-8">

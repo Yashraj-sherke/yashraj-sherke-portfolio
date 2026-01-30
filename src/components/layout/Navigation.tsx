@@ -62,7 +62,7 @@ export const Navigation: React.FC = () => {
                     <a href="https://www.linkedin.com/in/yashraj-sherke-35b8ab25b/" target="_blank" rel="noopener noreferrer" className="text-luxury-gray hover:text-luxury-white transition-colors">
                         <Linkedin size={20} />
                     </a>
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="text-luxury-gray hover:text-luxury-white transition-colors" title="Resume">
+                    <a href="https://drive.google.com/file/d/1K5hxyJuGxVhVzH10__l-rV7TlvtsGDYl/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-luxury-gray hover:text-luxury-white transition-colors" title="Resume">
                         <FileText size={20} />
                     </a>
                     <a href="mailto:yashrajsherke49@gmail.com" className="text-luxury-gray hover:text-luxury-white transition-colors">

@@ -15,13 +15,13 @@ export const Contact: React.FC = () => {
         {
             icon: Phone,
             label: 'Phone',
-            value: '+91 9726288345',
-            link: 'tel:+919726288345'
+            value: '+91 7225840487',
+            link: 'tel:+917225840487'
         },
         {
             icon: MapPin,
             label: 'Location',
-            value: 'India',
+            value: 'India-Gwalior',
             link: null
         }
     ];
@@ -40,7 +40,7 @@ export const Contact: React.FC = () => {
     ];
 
     return (
-        <section id="contact" className="relative py-32 px-6 bg-transparent" style={{background: 'transparent'}}>
+        <section id="contact" className="relative py-32 px-6 bg-transparent" style={{ background: 'transparent' }}>
             <div className="max-w-7xl mx-auto">
                 <SectionTitle subtitle="I am eager to connect with you and hear your thoughts">
                     Get In Touch

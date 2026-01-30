@@ -26,10 +26,10 @@ export const Services: React.FC = () => {
     ];
 
     return (
-        <section id="services" className="relative py-32 px-6 bg-transparent" style={{background: 'transparent'}}>
+        <section id="services" className="relative py-32 px-6 bg-transparent" style={{ background: 'transparent' }}>
             <div className="max-w-7xl mx-auto">
                 <SectionTitle subtitle="Craft unforgettable and impactful websites, web applications, and mobile apps. Awesome digital branding, design, and development">
-                    Services
+                    .../Services
                 </SectionTitle>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
