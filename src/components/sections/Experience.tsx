@@ -22,7 +22,7 @@ export const Experience: React.FC = () => {
     return (
         <section id="experience" className="relative py-32 px-6 bg-transparent" style={{ background: 'transparent' }}>
             <div className="max-w-7xl mx-auto">
-                <SectionTitle subtitle="With over two decades in software development, I've evolved from a Windows Application Developer to mastering LAMP/MEAN stacks and Ionic for mobile apps">
+                <SectionTitle subtitle="With a strong foundation in Computer Science and hands-on experience in full-stack development, I am continuously growing as a developer by building real-world projects, strengthening problem-solving skills, and exploring modern web technologies.">
                     .../Journey
                 </SectionTitle>
 

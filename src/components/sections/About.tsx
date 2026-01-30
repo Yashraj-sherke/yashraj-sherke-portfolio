@@ -22,14 +22,14 @@ export const About: React.FC = () => {
                 </SectionTitle>
 
                 {/* Main Layout: Image Left | About Middle | Social Icons Right */}
-                <div className="relative flex items-center gap-12 lg:gap-16">
+                <div className="relative flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-16">
                     {/* LEFT - PROFILE IMAGE WITH NAME */}
                     <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-                        className="hidden lg:block flex-shrink-0 relative"
+                        className="block flex-shrink-0 relative w-full lg:w-auto"
                     >
                         {/* Vertical "FULL STACK" text on the left with arrows */}
                         <div className="absolute -left-12 top-1/2 -translate-y-1/2 flex flex-col items-center gap-3">
@@ -53,8 +53,8 @@ export const About: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="relative">
-                            <div className="relative w-[320px] h-[380px] xl:w-[380px] xl:h-[450px]">
+                        <div className="relative mx-auto">
+                            <div className="relative w-[240px] h-[280px] xs:w-[280px] xs:h-[320px] sm:w-[320px] sm:h-[380px] lg:w-[340px] lg:h-[400px] xl:w-[380px] xl:h-[450px] mx-auto">
                                 <img
                                     src={profileImage}
                                     alt="Profile"
@@ -73,9 +73,9 @@ export const About: React.FC = () => {
                                 transition={{ duration: 0.6, delay: 0.3 }}
                                 className="mt-6 relative"
                             >
-                                <div className="font-oswald tracking-tight leading-tight">
-                                    <div className="text-5xl xl:text-6xl text-[#a6a6a6] text-left">Yashraj</div>
-                                    <div className="text-5xl xl:text-6xl text-[#f5f5f5] font-bold text-right">Sherke</div>
+                                <div className="font-oswald tracking-tight leading-tight text-center lg:text-left">
+                                    <div className="text-3xl xs:text-4xl sm:text-5xl xl:text-6xl text-[#a6a6a6] lg:text-left">Yashraj</div>
+                                    <div className="text-3xl xs:text-4xl sm:text-5xl xl:text-6xl text-[#f5f5f5] font-bold lg:text-right">Sherke</div>
                                 </div>
                             </motion.div>
                         </div>
@@ -137,6 +137,7 @@ export const About: React.FC = () => {
                     </motion.div>
 
                     {/* RIGHT - VERTICAL SOCIAL ICONS */}
+                    {/* Desktop - Vertical Social Icons */}
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -152,6 +153,36 @@ export const About: React.FC = () => {
                                 rel="noopener noreferrer"
                                 initial={{ opacity: 0, x: 20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                                whileHover={{
+                                    scale: 1.15,
+                                    boxShadow: '0 0 20px rgba(245,245,245,0.3)'
+                                }}
+                                className="w-12 h-12 rounded-full border border-[#f5f5f5]/20 flex items-center justify-center text-[#a6a6a6] hover:text-[#f5f5f5] hover:border-[#f5f5f5]/40 transition-all duration-300 bg-[#0b0b0b]/60 backdrop-blur-sm"
+                                aria-label={social.label}
+                            >
+                                <social.icon size={20} strokeWidth={1.5} />
+                            </motion.a>
+                        ))}
+                    </motion.div>
+
+                    {/* Mobile - Horizontal Social Icons */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        className="flex lg:hidden flex-row gap-4 justify-center w-full mt-6"
+                    >
+                        {socialLinks.map((social, index) => (
+                            <motion.a
+                                key={social.label}
+                                href={social.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                                 whileHover={{

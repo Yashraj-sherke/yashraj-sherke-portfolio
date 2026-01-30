@@ -1,27 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import certQuality from '../../assets/cert_quality.png';
-import certSatisfaction from '../../assets/cert_satisfaction.png';
-import certResponsiveness from '../../assets/cert_responsiveness.png';
+import certGoogleCloud from '../../assets/cert_google_cloud.png';
+import certInfosys from '../../assets/cert_infosys.png';
+import certGdsc from '../../assets/cert_gdsc.png';
 
 // Treat certificates like proof of credibility, not decoration.
 
 export const Testimonials: React.FC = () => {
     const certificates = [
         {
-            image: certQuality,
-            title: 'Quality',
-            description: 'Over 67 Croma & Multidev Software Design, Development, Technical Support & Services Award – Honoring exceptional achievement in providing innovative software solutions and exemplary quality client support.',
+            image: certGoogleCloud,
+            title: 'Google Cloud: Intro to Generative AI',
+            description: 'Earned the "Introduction to Generative AI" completion badge from Google Cloud, demonstrating foundational knowledge in generative AI concepts and applications.',
         },
         {
-            image: certSatisfaction,
-            title: 'Satisfaction',
-            description: 'Exceptional APMC support for Bank and Dairy software and successful development of MediCon Software—honoring excellence in delivering impactful solutions and ensuring high customer satisfaction.',
+            image: certInfosys,
+            title: 'Infosys Springboard: Website Creation',
+            description: 'Successfully completed the "Website Creation" course on Infosys Springboard, gaining practical skills in web development and design.',
         },
         {
-            image: certResponsiveness,
-            title: 'Responsiveness',
-            description: 'Outstanding effort in delivering 52 software projects, including APMC, CreditSoft, Famexx Accounting software. Recognizing exceptional dedication, responsiveness, and commitment to excellence.',
+            image: certGdsc,
+            title: 'Google Developer Student Clubs',
+            description: 'Completed the Google Cloud Computing Foundations & Generative AI Study Jams at GDSC MITS, gaining cloud computing fundamentals.',
         },
     ];
 
@@ -40,8 +40,8 @@ export const Testimonials: React.FC = () => {
                         .../Testimonials and Recognitions
                     </h2>
                     <p className="text-[#a6a6a6] font-nunito text-base lg:text-lg max-w-4xl">
-                        I'm proud to be recognized for my innovative solutions by prestigious firms and clients.
-                        Here's what they have to say and some of the accolades I've received.
+                        Throughout my B.Tech journey, I have actively pursued continuous learning and skills enhancement.
+                        Here are some of the key certifications and recognitions I have earned from reputed organizations.
                     </p>
                 </motion.div>
 

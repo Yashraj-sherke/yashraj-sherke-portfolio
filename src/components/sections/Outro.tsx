@@ -25,14 +25,14 @@ export const Outro: React.FC = () => {
 
             <div className="relative z-10 w-full max-w-7xl mx-auto">
                 {/* Main Content Container */}
-                <div className="relative min-h-[70vh] flex items-center justify-center">
+                <div className="relative min-h-[70vh] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0">
                     {/* Left Side - Graphic Designer */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="absolute left-8 lg:left-16 top-1/2 -translate-y-1/2"
+                        className="lg:absolute lg:left-8 xl:left-16 lg:top-1/2 lg:-translate-y-1/2 text-center lg:text-left order-1 lg:order-none"
                     >
                         <p className="text-sm text-[#a6a6a6]/60 font-nunito mb-1">FullStack Developer</p>
                         <p className="text-sm text-[#f5f5f5]/70 font-nunito">– Yashraj Sherke</p>
@@ -44,9 +44,9 @@ export const Outro: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="text-center"
+                        className="text-center order-2 px-4"
                     >
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-nunito font-medium text-[#f5f5f5] tracking-tight leading-tight">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-nunito font-medium text-[#f5f5f5] tracking-tight leading-tight">
                             Thank you for watching
                         </h1>
                     </motion.div>
@@ -57,10 +57,10 @@ export const Outro: React.FC = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="absolute right-8 lg:right-16 top-1/2 -translate-y-1/2"
+                        className="lg:absolute lg:right-8 xl:right-16 lg:top-1/2 lg:-translate-y-1/2 text-center lg:text-right order-3 lg:order-none"
                     >
-                        <p className="text-sm text-[#a6a6a6]/60 font-nunito mb-1 text-right">UI/UX designer</p>
-                        <p className="text-sm text-[#f5f5f5]/70 font-nunito text-right">– Yashraj Sherke</p>
+                        <p className="text-sm text-[#a6a6a6]/60 font-nunito mb-1">UI/UX designer</p>
+                        <p className="text-sm text-[#f5f5f5]/70 font-nunito">– Yashraj Sherke</p>
                     </motion.div>
                 </div>
 
@@ -70,17 +70,17 @@ export const Outro: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="absolute bottom-8 left-0 right-0 px-8 lg:px-16 flex justify-between items-end"
+                    className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 px-4 sm:px-8 lg:px-16 mt-12 lg:mt-0 lg:absolute lg:bottom-8 lg:left-0 lg:right-0"
                 >
                     {/* Bottom Left - Project Published */}
-                    <div>
+                    <div className="text-center sm:text-left">
                         <p className="text-xs text-[#a6a6a6]/50 font-nunito uppercase tracking-wider">
                             Project Published
                         </p>
                     </div>
 
                     {/* Bottom Right - URL and Date */}
-                    <div className="text-right">
+                    <div className="text-center sm:text-right">
                         <p className="text-xs text-[#f5f5f5]/60 font-nunito mb-1">
                             yashrajsherke.portfolio.com
                         </p>
