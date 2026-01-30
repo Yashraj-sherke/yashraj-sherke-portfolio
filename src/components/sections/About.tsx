@@ -8,10 +8,10 @@ import profileImage from '../../assets/profile.jpg';
 
 export const About: React.FC = () => {
     const socialLinks = [
-        { icon: Github, href: 'https://github.com/yourusername', label: 'GitHub' },
-        { icon: Linkedin, href: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-        { icon: Code2, href: 'https://leetcode.com/yourusername', label: 'LeetCode' },
-        { icon: Globe, href: 'https://yourportfolio.com', label: 'Portfolio' },
+        { icon: Github, href: 'https://github.com/Yashraj-sherke', label: 'GitHub' },
+        { icon: Linkedin, href: 'https://www.linkedin.com/in/yashraj-sherke', label: 'LinkedIn' },
+        { icon: Code2, href: 'https://leetcode.com/u/yashrajsherke19', label: 'LeetCode' },
+        { icon: Globe, href: 'https://yashraj-sherke.github.io/yashraj-sherke-portfolio/', label: 'Portfolio' },
     ];
 
     return (

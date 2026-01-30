@@ -14,7 +14,7 @@ export const Projects: React.FC = () => {
             image: bitbudsImage,
             tags: ['React', 'Node.js', 'MongoDB', 'Express'],
             link: '#',
-            github: '#'
+            github: 'https://github.com/Yashraj-sherke/BitBuds'
         },
         {
             title: 'PayEase',
@@ -22,7 +22,7 @@ export const Projects: React.FC = () => {
             image: payeaseImage,
             tags: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT'],
             link: '#',
-            github: 'https://github.com/Yashraj-sherke/Whether-Forcast'
+            github: 'https://github.com/Yashraj-sherke/PayEase'
         },
         {
             title: 'HireSphere',
