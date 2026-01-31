@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Code2, Globe } from 'lucide-react';
 import { SectionTitle } from '../ui/SectionTitle';
-import profileImage from '../../assets/profile.jpg';
+import profileImage from '../../assets/profile.png';
 
 // Align elements visually, not mathematically. Preserve negative space and editorial balance.
 
