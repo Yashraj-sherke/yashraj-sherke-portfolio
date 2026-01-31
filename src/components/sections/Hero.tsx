@@ -12,7 +12,7 @@ export const Hero: React.FC = () => {
     };
 
     return (
-        <section id="home" className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden bg-transparent" style={{background: 'transparent'}}>
+        <section id="home" className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden bg-transparent" style={{ background: 'transparent' }}>
             {/* Vertical Text */}
             <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -45,7 +45,7 @@ export const Hero: React.FC = () => {
                     className="mb-6"
                 >
                     <span className="text-luxury-gray font-nunito text-lg md:text-xl tracking-wide">
-                        Hello, I'm
+                        Hello, I'm a
                     </span>
                 </motion.div>
 
