@@ -17,30 +17,12 @@
 
 ## 📸 Screenshots
 
-### 🏠 Hero Section
+
 <!-- Add screenshot here: Take a screenshot of the hero section and save it as screenshots/hero.png -->
-![Hero Section](./screenshots/hero.png)
-*Landing page with animated 3D background and introduction*
+<img width="1920" height="1080" alt="Untitled design" src="https://github.com/user-attachments/assets/cda1c04c-18e4-4965-95c6-589ae6193f75" />
 
-### 👤 About Section
-<!-- Add screenshot here: Take a screenshot of the about section and save it as screenshots/about.png -->
-![About Section](./screenshots/about.png)
-*Professional profile with skills and social links*
 
-### 💼 Projects Section
-<!-- Add screenshot here: Take a screenshot of the projects section and save it as screenshots/projects.png -->
-![Projects Section](./screenshots/projects.png)
-*Showcase of featured projects with live demos and GitHub links*
 
-### 🎓 Experience Section
-<!-- Add screenshot here: Take a screenshot of the experience section and save it as screenshots/experience.png -->
-![Experience Section](./screenshots/experience.png)
-*Professional experience and achievements*
-
-### 📧 Contact Section
-<!-- Add screenshot here: Take a screenshot of the contact section and save it as screenshots/contact.png -->
-![Contact Section](./screenshots/contact.png)
-*Get in touch form with social media links*
 
 ---
 
