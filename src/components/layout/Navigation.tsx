@@ -29,7 +29,7 @@ export const Navigation: React.FC = () => {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass-strong py-4' : 'py-6'
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'dark-glass-strong py-4' : 'py-6'
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -84,7 +84,8 @@ export const Navigation: React.FC = () => {
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="md:hidden glass-strong mt-4 mx-6 rounded-2xl p-6"
+                    className="md:hidden mt-4 mx-6 rounded-2xl p-6 bg-luxury-charcoal border border-luxury-gray/20 shadow-2xl"
+                    style={{ position: 'relative', zIndex: 60 }}
                 >
                     {navItems.map((item) => (
                         <button

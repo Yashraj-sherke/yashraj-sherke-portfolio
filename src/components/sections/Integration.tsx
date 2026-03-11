@@ -24,20 +24,20 @@ export const Integration: React.FC = () => {
     ];
 
     const technologies = [
-        { name: 'HTML5', icon: '🌐' },
-        { name: 'CSS3', icon: '🎨' },
-        { name: 'JavaScript', icon: '⚡' },
-        { name: 'React', icon: '⚛️' },
-        { name: 'Node.js', icon: '🟢' },
-        { name: 'Express', icon: '🚂' },
-        { name: 'MongoDB', icon: '🍃' },
-        { name: 'PostgreSQL', icon: '🐘' },
-        { name: 'Docker', icon: '🐳' },
-        { name: 'Kubernetes', icon: '☸️' },
-        { name: 'Git', icon: '📦' },
-        { name: 'GitHub', icon: '🐙' },
-        { name: 'AWS', icon: '☁️' },
-        { name: 'Firebase', icon: '🔥' },
+        { name: 'HTML5', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+        { name: 'CSS3', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+        { name: 'JavaScript', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+        { name: 'React', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+        { name: 'Node.js', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+        { name: 'Express', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
+        { name: 'MongoDB', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+        { name: 'PostgreSQL', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+        { name: 'Docker', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+        { name: 'Kubernetes', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg' },
+        { name: 'Git', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+        { name: 'GitHub', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
+        { name: 'AWS', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg' },
+        { name: 'Firebase', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
     ];
 
     return (
@@ -154,8 +154,8 @@ export const Integration: React.FC = () => {
                                     key={`${tech.name}-${index}`}
                                     className="flex-shrink-0 flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity duration-300 group"
                                 >
-                                    <div className="w-12 h-12 flex items-center justify-center text-3xl">
-                                        {tech.icon}
+                                    <div className="w-12 h-12 flex items-center justify-center">
+                                        <img src={tech.iconUrl} alt={tech.name} className="w-7 h-7" style={{ filter: (tech.name === 'Express' || tech.name === 'GitHub') ? 'invert(1)' : 'none' }} />
                                     </div>
                                     <span className="text-xs text-[#a6a6a6] font-nunito whitespace-nowrap">
                                         {tech.name}

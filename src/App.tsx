@@ -40,11 +40,12 @@ function App() {
           opacity: 0,
           y: 50,
           duration: 1,
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: section as gsap.DOMTarget,
-            start: 'top 80%',
-            end: 'top 50%',
-            scrub: 1,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+            once: true,
           },
         });
       });
