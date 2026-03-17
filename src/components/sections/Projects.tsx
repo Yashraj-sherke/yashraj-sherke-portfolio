@@ -35,9 +35,9 @@ export const Projects: React.FC = () => {
 
         {
             title: 'TrackHire',
-            description: 'A full-stack recruitment platform for managing job postings, applications, and recruiter dashboards.',
+            description: 'A MERN stack job application tracker with Kanban board, CSV import/export, status tracking, and a dashboard to manage your entire job hunt in one place.',
             image: hiresphereImage,
-            tags: ['React', 'Node.js', 'MongoDB ', 'Express ', 'REST API'],
+            tags: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'Express', 'JWT'],
             link: 'https://job-application-tracker-three-peach.vercel.app/',
             github: 'https://github.com/Yashraj-sherke/job-application-tracker'
         }
