@@ -14,12 +14,12 @@ export const Services: React.FC = () => {
         {
             icon: Smartphone,
             title: 'Mobile App Development',
-            description: 'With extensive experience in mobile app development, I specialize in architecting and crafting custom hybrid applications tailored for Apple iOS and Google Android platforms.',
-            tags: ['React Native', 'Flutter', 'iOS', 'Android']
+            description: 'I build mobile applications through vibe coding, leveraging AI-powered tools to rapidly architect and develop custom apps. This modern approach enables fast prototyping and efficient delivery of cross-platform solutions.',
+            tags: ['AI Tools', 'Vibe Coding', 'React Native', 'Cross-Platform']
         },
         {
             icon: Palette,
-            title: 'UI/UX & Branding',
+            title: 'UI/UX & Design',
             description: 'Focused on a user-centered approach, we boost productivity and revenue. Our team\'s remarkable expertise and creativity push us to continually exceed our past achievements.',
             tags: ['Figma', 'Adobe XD', 'Photoshop', 'Illustrator']
         }

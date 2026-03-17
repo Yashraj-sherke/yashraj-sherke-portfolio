@@ -29,8 +29,17 @@ export const Projects: React.FC = () => {
             description: 'A full-stack recruitment platform for managing job postings, applications, and recruiter dashboards.',
             image: hiresphereImage,
             tags: ['React', 'Node.js', 'MongoDB ', 'Express ', 'REST API'],
-            link: '#',
+            link: 'https://hire-sphere-nine.vercel.app/',
             github: 'https://github.com/Yashraj-sherke/Hire-Sphere'
+        },
+
+        {
+            title: 'TrackHire',
+            description: 'A full-stack recruitment platform for managing job postings, applications, and recruiter dashboards.',
+            image: hiresphereImage,
+            tags: ['React', 'Node.js', 'MongoDB ', 'Express ', 'REST API'],
+            link: 'https://job-application-tracker-three-peach.vercel.app/',
+            github: 'https://github.com/Yashraj-sherke/job-application-tracker'
         }
     ];
 
@@ -41,7 +50,7 @@ export const Projects: React.FC = () => {
                     .../Projects
                 </SectionTitle>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 gap-8">
                     {projects.map((project, index) => (
                         <motion.div
                             key={project.title}
