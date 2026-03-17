@@ -5,6 +5,7 @@ import { ExternalLink, Github } from 'lucide-react';
 import bitbudsImage from '../../assets/bitbuds.png';
 import payeaseImage from '../../assets/payease.png';
 import hiresphereImage from '../../assets/hiresphere.png';
+import trackhireImage from '../../assets/trackhire.png';
 
 export const Projects: React.FC = () => {
     const projects = [
@@ -36,7 +37,7 @@ export const Projects: React.FC = () => {
         {
             title: 'TrackHire',
             description: 'A MERN stack job application tracker with Kanban board, CSV import/export, status tracking, and a dashboard to manage your entire job hunt in one place.',
-            image: hiresphereImage,
+            image: trackhireImage,
             tags: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'Express', 'JWT'],
             link: 'https://job-application-tracker-three-peach.vercel.app/',
             github: 'https://github.com/Yashraj-sherke/job-application-tracker'
