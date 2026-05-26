@@ -1,0 +1,11 @@
+# Render configuration
+services:
+  - type: web
+    name: yashraj-portfolio
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
