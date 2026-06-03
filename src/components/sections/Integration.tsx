@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Sprout, Star, Clock, Users, Code2, Database, Layers, Workflow, Cpu, Cloud, Palette, GitBranch } from 'lucide-react';
+import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
+import { Sprout, Star, Clock, Users } from 'lucide-react';
 
 // Ensure the moving technology strip feels like a continuous conveyor, not a slider.
 
@@ -12,15 +12,22 @@ export const Integration: React.FC = () => {
         { number: '3+', label: 'Team Collaborations', icon: Users },
     ];
 
-    const integrationIcons = [
-        { icon: Code2, label: 'Frontend' },
-        { icon: Palette, label: 'UI/UX' },
-        { icon: Database, label: 'Database' },
-        { icon: Workflow, label: 'APIs' },
-        { icon: Layers, label: 'Backend' },
-        { icon: Cloud, label: 'DevOps' },
-        { icon: Cpu, label: 'Systems' },
-        { icon: GitBranch, label: 'Version Control' },
+    const orbitTools = [
+        { name: 'HTML5', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+        { name: 'CSS3', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+        { name: 'JavaScript', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+        { name: 'React', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+        { name: 'Node.js', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+        { name: 'MongoDB', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+        { name: 'Git', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+        { name: 'Docker', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+    ];
+
+    const aiOrbitTools = [
+        { name: 'Python', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+        { name: 'TensorFlow', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' },
+        { name: 'PyTorch', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg' },
+        { name: 'Jupyter', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg' },
     ];
 
     const technologies = [
@@ -91,31 +98,36 @@ export const Integration: React.FC = () => {
                                 className="absolute inset-0 rounded-full border border-[#f5f5f5]/10"
                             />
 
-                            {/* Integration Icons - Positioned around circle */}
-                            {integrationIcons.map((item, index) => {
-                                const angle = (index / integrationIcons.length) * 2 * Math.PI;
-                                const radius = 140; // Distance from center
-                                const x = Math.cos(angle) * radius;
-                                const y = Math.sin(angle) * radius;
-
-                                return (
-                                    <motion.div
-                                        key={item.label}
-                                        initial={{ opacity: 0, scale: 0 }}
-                                        whileInView={{ opacity: 1, scale: 1 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                                        className="absolute top-1/2 left-1/2 w-12 h-12 -ml-6 -mt-6"
-                                        style={{
-                                            transform: `translate(${x}px, ${y}px)`,
-                                        }}
+                            {/* Revolving tool logos */}
+                            <div className="absolute inset-0 rounded-full tech-orbit tech-orbit-slow">
+                                {orbitTools.map((tool, index) => (
+                                    <div
+                                        key={tool.name}
+                                        className="tech-orbit-item"
+                                        style={{ '--angle': `${(index / orbitTools.length) * 360}deg` } as React.CSSProperties}
+                                        title={tool.name}
                                     >
-                                        <div className="w-full h-full rounded-lg bg-[#f5f5f5]/10 border border-[#f5f5f5]/20 flex items-center justify-center hover:bg-[#f5f5f5]/20 transition-all duration-300">
-                                            <item.icon size={20} className="text-[#f5f5f5]" strokeWidth={1.5} />
+                                        <div className="tech-orbit-logo tech-orbit-counter-slow">
+                                            <img src={tool.iconUrl} alt={tool.name} />
                                         </div>
-                                    </motion.div>
-                                );
-                            })}
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="absolute inset-10 rounded-full tech-orbit tech-orbit-fast">
+                                {aiOrbitTools.map((tool, index) => (
+                                    <div
+                                        key={tool.name}
+                                        className="tech-orbit-item"
+                                        style={{ '--angle': `${(index / aiOrbitTools.length) * 360}deg` } as React.CSSProperties}
+                                        title={tool.name}
+                                    >
+                                        <div className="tech-orbit-logo tech-orbit-counter-fast">
+                                            <img src={tool.iconUrl} alt={tool.name} />
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
 
                             {/* Center Circle with Monogram */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-[#a6a6a6]/20 border border-[#f5f5f5]/20 flex items-center justify-center backdrop-blur-sm">
@@ -186,6 +198,76 @@ export const Integration: React.FC = () => {
                         transparent
                     );
                 }
+
+                .tech-orbit {
+                    animation: orbit-spin 34s linear infinite;
+                }
+
+                .tech-orbit-fast {
+                    animation-duration: 24s;
+                    animation-direction: reverse;
+                }
+
+                .tech-orbit-item {
+                    --angle: 0deg;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 48px;
+                    height: 48px;
+                    margin: -24px 0 0 -24px;
+                    transform: rotate(var(--angle)) translateX(160px) rotate(calc(-1 * var(--angle)));
+                }
+
+                .tech-orbit-fast .tech-orbit-item {
+                    transform: rotate(var(--angle)) translateX(120px) rotate(calc(-1 * var(--angle)));
+                }
+
+                .tech-orbit-logo {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 12px;
+                    background: rgba(245, 245, 245, 0.1);
+                    border: 1px solid rgba(245, 245, 245, 0.2);
+                    box-shadow: 0 0 22px rgba(245, 245, 245, 0.08);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                    animation: orbit-counter-spin 34s linear infinite;
+                }
+
+                .tech-orbit-counter-fast {
+                    animation-duration: 24s;
+                    animation-direction: reverse;
+                }
+
+                .tech-orbit-logo img {
+                    width: 28px;
+                    height: 28px;
+                    object-fit: contain;
+                }
+
+                @keyframes orbit-spin {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                }
+
+                @keyframes orbit-counter-spin {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(-360deg); }
+                }
+
+                @media (min-width: 1024px) {
+                    .tech-orbit-item {
+                        transform: rotate(var(--angle)) translateX(200px) rotate(calc(-1 * var(--angle)));
+                    }
+
+                    .tech-orbit-fast .tech-orbit-item {
+                        transform: rotate(var(--angle)) translateX(150px) rotate(calc(-1 * var(--angle)));
+                    }
+                }
             `}</style>
         </section>
     );
@@ -198,18 +280,65 @@ interface StatCardProps {
     delay: number;
 }
 
-const StatCard: React.FC<StatCardProps> = ({ number, label, icon: Icon, delay }) => (
-    <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay }}
-        className="rounded-xl dark-glass border border-[#f5f5f5]/10 p-5 hover:border-[#f5f5f5]/20 transition-all duration-300 group"
-    >
-        <div className="flex items-start justify-between mb-3">
-            <span className="text-2xl font-oswald font-bold text-[#f5f5f5]">{number}</span>
-            <Icon size={24} className="text-[#a6a6a6] group-hover:text-[#f5f5f5] transition-colors" strokeWidth={1.5} />
-        </div>
-        <p className="text-xs text-[#a6a6a6] font-nunito leading-snug">{label}</p>
-    </motion.div>
-);
+const StatCard: React.FC<StatCardProps> = ({ number, label, icon: Icon, delay }) => {
+    const cardRef = React.useRef<HTMLDivElement>(null);
+    const isInView = useInView(cardRef, { once: true, margin: '-20px' });
+    const count = useMotionValue(0);
+    const smoothCount = useSpring(count, { stiffness: 70, damping: 18 });
+    const [displayNumber, setDisplayNumber] = React.useState(number);
+    const numericValue = Number(number.replace(/\D/g, ''));
+    const prefix = number.startsWith('+') ? '+' : '';
+    const suffix = number.endsWith('+') ? '+' : '';
+
+    React.useEffect(() => {
+        if (isInView && numericValue > 0) {
+            count.set(numericValue);
+        }
+    }, [count, isInView, numericValue]);
+
+    React.useEffect(() => {
+        const unsubscribe = smoothCount.on('change', (latest) => {
+            setDisplayNumber(`${prefix}${Math.round(latest)}${suffix}`);
+        });
+
+        return unsubscribe;
+    }, [prefix, smoothCount, suffix]);
+
+    return (
+        <motion.div
+            ref={cardRef}
+            initial={{ opacity: 0, y: 24, scale: 0.96 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55, delay, ease: 'easeOut' }}
+            whileHover={{ y: -4, scale: 1.02 }}
+            className="rounded-xl dark-glass border border-[#f5f5f5]/10 p-5 hover:border-[#f5f5f5]/20 transition-all duration-300 group overflow-hidden relative"
+        >
+            <motion.div
+                className="absolute -right-8 -top-8 h-20 w-20 rounded-full bg-[#f5f5f5]/5 blur-xl"
+                animate={{ opacity: [0.25, 0.55, 0.25], scale: [0.9, 1.15, 0.9] }}
+                transition={{ duration: 3.5, repeat: Infinity, delay }}
+            />
+            <div className="relative flex items-start justify-between mb-3">
+                <motion.span
+                    className="text-2xl font-oswald font-bold text-[#f5f5f5]"
+                    animate={isInView ? { textShadow: ['0 0 0 rgba(245,245,245,0)', '0 0 18px rgba(245,245,245,0.35)', '0 0 0 rgba(245,245,245,0)'] } : {}}
+                    transition={{ duration: 1.2, delay: delay + 0.25 }}
+                >
+                    {displayNumber}
+                </motion.span>
+                <motion.div
+                    animate={{
+                        y: [0, -5, 0],
+                        rotate: [0, 4, -4, 0],
+                    }}
+                    transition={{ duration: 3, repeat: Infinity, delay, ease: 'easeInOut' }}
+                    className="text-[#a6a6a6] group-hover:text-[#f5f5f5] transition-colors"
+                >
+                    <Icon size={24} strokeWidth={1.5} />
+                </motion.div>
+            </div>
+            <p className="relative text-xs text-[#a6a6a6] font-nunito leading-snug">{label}</p>
+        </motion.div>
+    );
+};

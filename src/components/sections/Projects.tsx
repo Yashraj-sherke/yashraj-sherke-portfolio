@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SectionTitle } from '../ui/SectionTitle';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, FileText, Github } from 'lucide-react';
 import bitbudsImage from '../../assets/bitbuds.png';
 import payeaseImage from '../../assets/payease.png';
 import hiresphereImage from '../../assets/hiresphere.png';
@@ -58,7 +58,8 @@ export const Projects: React.FC = () => {
             image: teamtaskImage,
             tags: ['React', 'TypeScript', 'Tailwind CSS'],
             link: 'https://ethara-team-task-manager-ten.vercel.app/',
-            github: 'https://github.com/Yashraj-sherke/Ethara_-Team-Task-Manager'
+            github: 'https://github.com/Yashraj-sherke/Ethara_-Team-Task-Manager',
+            tutorial: '/docs/taskflow-project-tutorial.pdf'
         }
     ];
 
@@ -112,7 +113,7 @@ export const Projects: React.FC = () => {
                                 </div>
 
                                 {/* Links */}
-                                <div className="flex gap-4">
+                                <div className="flex flex-wrap gap-4">
                                     <a
                                         href={project.link}
                                         target="_blank"
@@ -131,6 +132,17 @@ export const Projects: React.FC = () => {
                                         >
                                             <Github size={18} />
                                             <span className="text-sm font-nunito">Code</span>
+                                        </a>
+                                    )}
+                                    {project.tutorial && (
+                                        <a
+                                            href={project.tutorial}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 text-luxury-white hover:text-luxury-gray transition-colors"
+                                        >
+                                            <FileText size={18} />
+                                            <span className="text-sm font-nunito">Tutorial</span>
                                         </a>
                                     )}
                                 </div>
