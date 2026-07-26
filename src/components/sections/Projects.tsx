@@ -8,6 +8,7 @@ import hiresphereImage from '../../assets/hiresphere.png';
 import trackhireImage from '../../assets/trackhire.png';
 import rkFilmsImage from '../../assets/rkfilms.png';
 import teamtaskImage from '../../assets/web_dev.png';
+import taskflowImage from '../../assets/taskflowImage.png';
 
 export const Projects: React.FC = () => {
     const projects = [
@@ -35,7 +36,6 @@ export const Projects: React.FC = () => {
             link: 'https://hire-sphere-nine.vercel.app/',
             github: 'https://github.com/Yashraj-sherke/Hire-Sphere'
         },
-
         {
             title: 'TrackHire',
             description: 'A MERN stack job application tracker with Kanban board, CSV import/export, status tracking, and a dashboard to manage your entire job hunt in one place.',
@@ -60,6 +60,21 @@ export const Projects: React.FC = () => {
             link: 'https://ethara-team-task-manager-ten.vercel.app/',
             github: 'https://github.com/Yashraj-sherke/Ethara_-Team-Task-Manager',
             tutorial: '/docs/taskflow-project-tutorial.pdf'
+        },
+        {
+            title: 'TaskFlow - Multi-Tenant Project Management',
+            description: 'A modern multi-tenant project management platform with workspace isolation, Kanban boards, role-based access control (RBAC), authentication, and real-time collaboration. Built using Next.js, Node.js, Express.js, MongoDB, and TypeScript.',
+            image: taskflowImage,
+            tags: [
+                'Next.js',
+                'TypeScript',
+                'Node.js',
+                'Express.js',
+                'MongoDB',
+                'Tailwind CSS'
+            ],
+            link: 'https://task-flow-silk-pi.vercel.app/',
+            github: 'https://github.com/Yashraj-sherke/TaskFlow'
         }
     ];
 
