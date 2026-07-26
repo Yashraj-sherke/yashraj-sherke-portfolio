@@ -16,7 +16,7 @@ export const Projects: React.FC = () => {
             description: 'A Kids coding platform in easy way. Interactive learning environment for young developers.',
             image: bitbudsImage,
             tags: ['React', 'Node.js', 'MongoDB', 'Express'],
-            link: '#',
+            link: 'https://bit-buds.vercel.app/',
             github: 'https://github.com/Yashraj-sherke/BitBuds'
         },
         {
